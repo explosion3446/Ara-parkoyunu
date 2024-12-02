@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-image: url('background.jpg');
+    background-size: cover;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+.road {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #555;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.parking-area {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px dashed #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+#parking1 { top: 50px; left: 50px; }
+#parking2 { top: 50px; left: 250px; }
+#parking3 { top: 300px; left: 50px; }
+#parking4 { top: 300px; left: 250px; }
+
+.car {
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    background-image: url('car.png');
+    background-size: cover;
+    transition: top 0.3s, left 0.3s;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.car:hover {
+    transform: scale(1.1);
+}
+
+.parking-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#parking1, #parking2, #parking3, #parking4 {
+    border-radius: 8px;
+}
+
+#parking1 {
+    top: 50px;
+    left: 50px;
+    background-color: rgba(0, 255, 0, 0.3);
+}
